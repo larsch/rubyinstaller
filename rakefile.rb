@@ -25,6 +25,7 @@ require 'rake/downloadtask'
 require 'rake/extracttask'
 require 'rake/checkpoint'
 require 'rake/env'
+require 'rake/patch'
 
 # Allow build configuration overrides if override/build_config.rb file
 # exists in the RubyInstaller project root directory

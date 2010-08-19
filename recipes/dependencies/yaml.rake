@@ -35,7 +35,7 @@ namespace(:dependencies) do
     pt = checkpoint(:yaml, :prepare) do
       patches = Dir.glob("#{package.patches}/*.patch").sort
       patches.each do |patch|
-        sh "git apply --directory #{package.target} #{patch}"
+        patch package.target, patch
       end
     end
     task :prepare => [:extract, pt]
